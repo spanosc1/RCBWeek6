@@ -1,0 +1,12 @@
+1. An API is a set of tools used for building software applications. Allows you to access data from a source (websites, software, etc)
+
+2. API stands for Application Program Interface
+
+3. Examples of APIs: 
+	Spotify: https://developer.spotify.com/web-api/
+	JSON: http://jsonapi.org/
+
+4. Spotify API allows you to fetch data from the Spotify music catalog and manage a users playlists and saved music
+---------------------------------------------------------------------------
+market.mashape.com play with APIs
+---------------------------------------------------------------------------

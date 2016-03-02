@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Favorite Movies</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+ <h2>Favorite Movies</h2>            
+ <table class="table">
+   <thead>
+     <tr>
+       <th>Movie Name</th>
+       <th>Year</th>
+       <th>Actors</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+         <!-- Example Movie 1 -->
+       <td id="movie1-name"></td>
+       <td id="movie1-year"></td>
+       <td id="movie1-actors"></td>
+     </tr>
+     <tr>
+       <td id="movie2-name"></td>
+       <td id="movie2-year"></td>
+       <td id="movie2-actors"></td>
+     </tr>
+     <tr>
+       <td id="movie3-name"></td>
+       <td id="movie3-year"></td>
+       <td id="movie3-actors"></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+
+
+
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+    var type = 'jurassic+park';
+    var queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&r=json";
+
+    $.ajax({url: queryURL, method: 'GET'})
+     .done(function(response) {
+
+         // Example Movie
+         $("#movie1-name").html(response.Title);
+         $("#movie1-year").html(response.Year);
+         $("#movie1-actors").html(response.Actors);
+    });
+
+    type = 'goodfellas';
+    queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&r=json";
+
+    $.ajax({url: queryURL, method: 'GET'})
+     .done(function(response) {
+
+         // Example Movie
+         $("#movie2-name").html(response.Title);
+         $("#movie2-year").html(response.Year);
+         $("#movie2-actors").html(response.Actors);
+    });
+
+    type = 'toy+story';
+    queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&r=json";
+
+    $.ajax({url: queryURL, method: 'GET'})
+     .done(function(response) {
+
+         // Example Movie
+         $("#movie3-name").html(response.Title);
+         $("#movie3-year").html(response.Year);
+         $("#movie3-actors").html(response.Actors);
+    });
+
+</script>
+
+
+</body>
+</html>

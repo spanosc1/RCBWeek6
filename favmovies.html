@@ -7,7 +7,8 @@
 <body>
 
 <div class="container">
- <h2>Favorite Movies</h2>            
+ <h2>Basic Table</h2>
+ <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
  <table class="table">
    <thead>
      <tr>
@@ -46,6 +47,7 @@
 
     $.ajax({url: queryURL, method: 'GET'})
      .done(function(response) {
+         console.log(response);
 
          // Example Movie
          $("#movie1-name").html(response.Title);
@@ -58,6 +60,7 @@
 
     $.ajax({url: queryURL, method: 'GET'})
      .done(function(response) {
+         console.log(response);
 
          // Example Movie
          $("#movie2-name").html(response.Title);
@@ -70,6 +73,7 @@
 
     $.ajax({url: queryURL, method: 'GET'})
      .done(function(response) {
+         console.log(response);
 
          // Example Movie
          $("#movie3-name").html(response.Title);
